@@ -825,6 +825,7 @@ def load_model(source: JANIModel, *, ignore_properties: bool = False) -> model.N
             _check_fields(
                 jani_prop,
                 required={"expression", "name"},
+                optional={"comment"}
             )
             network.ctx.define_property(
                 jani_prop["name"], _property(jani_prop["expression"])
